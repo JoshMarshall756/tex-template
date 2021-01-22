@@ -1,0 +1,58 @@
+\addtolength{\hoffset}{-2.25cm}
+\addtolength{\textwidth}{4.5cm}
+\addtolength{\voffset}{-3.25cm}
+\addtolength{\textheight}{5cm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0in}
+
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{listings}
+\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage{blindtext} % Package to generate dummy text
+\usepackage{charter} % Use the Charter font
+\usepackage[utf8]{inputenc} % Use UTF-8 encoding
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage{amsthm, amsmath, amssymb} % Mathematical typesetting
+\usepackage{float} % Improved interface for floating objects
+\usepackage{hyperref} % For hyperlinks in the PDF
+\usepackage{graphicx, multicol} % Enhanced support for graphics
+\usepackage{xcolor} % Driver-independent color extensions
+\usepackage{pseudocode} % Environment for specifying algorithms in a natural way
+\usepackage[ddmmyyyy]{datetime} % Uses YEAR-MONTH-DAY format for dates
+
+\usepackage{fancyhdr} % Headers and footers
+
+% Header and Footer settings
+\pagestyle{fancy}
+\setlength{\headheight}{33pt}
+\fancyhf{}
+\rhead{Joshua Council}
+\lhead{Module Code}
+\rfoot{Page \thepage}
+\lfoot{Document Title}
+\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand{\headrulewidth}{0.5pt}
+
+% Listing settings
+\lstset{language=Java,frame=single,numbers=left,keywordstyle=\color{red},basicstyle=\ttfamily,breaklines=true,postbreak=\mbox{\textcolor{blue}{$\hookrightarrow$}\space}}
+
+% Table settings
+\pgfplotstableset{
+	begin table=\begin{longtable},
+		every head row/.append style={before row=\toprule,after row=\midrule \endhead},
+		sci,precision=9,
+	end table=\end{longtable},
+}
+
+% Graph settings 
+\pgfplotsset{compat=1.17}
+
+% Page color
+\pagecolor{yellow!14}
+%----------------------------------------------------------------------------------------
